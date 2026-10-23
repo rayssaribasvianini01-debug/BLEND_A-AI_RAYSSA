@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blend Açai</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1> Blend Açai</h1>
+        <p>Seu açai do seu jeito, uma combinação perfeita de sabor e cremosidade</p>
+    </header>
+
+    <main>
+
+        <section class="card">
+
+            <h2>1. Escolha o tamanho</h2>
+
+            <div class="tamanhos">
+
+                <button type="button" class="tamanho selecionado" data-ml="300">
+
+                    <strong>300 ml</strong>
+
+                    <span>R$ 12,00</span>
+
+                    <span>Máximo: 2 adicionais</span>
+
+                </button>
+
+                <button type="button" class="tamanho" data-ml="500">
+
+                    <strong>500 ml</strong>
+
+                    <span>R$ 18,00</span>
+
+                    <span>Máximo: 4 adicionais</span>
+
+                </button>
+
+            </div>
+
+            <div id="avisoLimite" class="aviso">
+
+                Você pode escolher até 2 adicionais.
+
+            </div>
+
+        </section>
+
+
+        <!-- ADICIONAIS -->
+
+        <section class="card">
+
+            <h2>2. Escolha os adicionais</h2>
+
+            <div class="adicionais">
+
+                <label class="adicional">
+                    <input type="checkbox" class="extra" value="Leite em pó" data-preco="2">
+
+                    Leite em pó (+ R$ 2,00)
+                </label>
+
+                <label class="adicional">
+                    <input type="checkbox" class="extra" value="Banana" data-preco="2">
+
+                    Banana (+ R$ 2,00)
+                </label>
+
+                <label class="adicional">
+                    <input type="checkbox" class="extra" value="Granola" data-preco="2">
+
+                    Granola (+ R$ 2,00)
+                </label>
+
+                <label class="adicional">
+                    <input type="checkbox" class="extra" value="Leite condensado" data-preco="3">
+
+                    Leite condensado (+ R$ 3,00)
+                </label>
+
+                <label class="adicional">
+                    <input type="checkbox" class="extra" value="Morango" data-preco="3">
+
+                    Morango (+ R$ 3,00)
+                </label>
+
+                <label class="adicional">
+                    <input type="checkbox" class="extra" value="Paçoca" data-preco="2">
+
+                    Paçoca (+ R$ 2,00)
+                </label>
+
+                <label class="adicional">
+                    <input type="checkbox" class="extra" value="Confete" data-preco="2">
+
+                    Confete (+ R$ 2,00)
+                </label>
+
+                <label class="adicional">
+                    <input type="checkbox" class="extra" value="Creme de Nutella" data-preco="4">
+
+                    Creme de Nutella (+ R$ 4,00)
+                </label>
+
+            </div>
+
+            <div id="avisoAdicionais" class="aviso">
+
+                Adicionais selecionados: 0
+
+            </div>
+
+        </section>
+
+
+        <!-- DADOS DO CLIENTE -->
+
+        <section class="card">
+
+            <h2>3. Dados para entrega</h2>
+
+            <form id="formPedido">
+
+                <div class="campo">
+
+                    <label for="nome">
+                        Nome completo
+                    </label>
+
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" required>
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="telefone">
+                        Telefone com DDD
+                    </label>
+
+                    <input type="tel" id="telefone" name="telefone" placeholder="(41) 99999-9999" autocomplete="tel"
+                        inputmode="tel" maxlength="15" required>
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="bairro">
+                        Bairro
+                    </label>
+
+                    <input type="text" id="bairro" name="bairro" placeholder="Digite seu bairro"
+                        autocomplete="address-level3" required>
+
+                </div>
+
+                <button type="submit">
+
+                    Confirmar pedido
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- RESUMO -->
+
+        <section class="resumo">
+
+            <h2>4. Resumo do pedido</h2>
+
+            <div class="linha">
+
+                <span>Tamanho:</span>
+
+                <strong id="resumoTamanho">
+                    300 ml
+                </strong>
+
+            </div>
+
+            <div class="linha">
+
+                <span>Valor do açaí:</span>
+
+                <strong id="valorAcai">
+                    R$ 12,00
+                </strong>
+
+            </div>
+
+            <div class="linha">
+
+                <span>Adicionais:</span>
+
+                <strong id="valorAdicionais">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <div class="linha">
+
+                <span>Entrega:</span>
+
+                <strong id="valorEntrega">
+                    R$ 10,00
+                </strong>
+
+            </div>
+
+            <div class="linha total">
+
+                <span>Total:</span>
+
+                <strong id="valorTotal">
+                    R$ 22,00
+                </strong>
+
+            </div>
+
+            <div id="resultado" class="aviso" hidden>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bodoni Moda', serif;
+    background-image: url(fundo.jpg.png);
+    min-height: 100vh;
+}
+
+
+
+header {
+    background: #5d2a7a;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 14px;
+}
+
+
+main {
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+.tamanhos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.tamanho {
+    border: 2px solid #e0c7f5;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    background: white;
+    color: #442b57;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.tamanho.selecionado {
+    border-color: #8e36c9;
+    background: #f3e5ff;
+}
+
+.tamanho strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.tamanho span {
+    display: block;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+
+/* ADICIONAIS */
+
+.adicionais {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.adicional {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #e5d6f0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.adicional input {
+    width: 18px;
+    height: 18px;
+    accent-color: #8128b5;
+    cursor: pointer;
+}
+
+.adicional:has(input:checked) {
+    background: #f3e5ff;
+    border-color: #8128b5;
+}
+
+.adicional:has(input:disabled) {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+.aviso {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f3e5ff;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: pre-line;
+}
+
+.erro {
+    background: #ffe5e5;
+    color: #a30000;
+}
+
+.sucesso {
+    background: #e5ffe9;
+    color: #176b2c;
+}
+
+
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d7c5e5;
+    border-radius: 9px;
+    font-size: 16px;
+    background: white;
+    color: #35104f;
+}
+
+.campo input:focus {
+    outline: 2px solid #a45bd1;
+}
+
+
+.resumo {
+    background: #4b126b;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.resumo h2 {
+    margin-bottom: 15px;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.total {
+    border-top: 1px solid #ffffff55;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* BOTÃO */
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #a64bd4;
+    color: white;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #8c32bb;
+}
+
+button:focus-visible {
+    outline: 3px solid #a45bd1;
+    outline-offset: 3px;
+}
+
+
+@media (max-width: 500px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    main {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .adicionais {
+        grid-template-columns: 1fr;
+    }
+
+    .tamanhos {
+        gap: 8px;
+    }
+
+    .tamanho {
+        padding: 12px 5px;
+    }
+
+}
